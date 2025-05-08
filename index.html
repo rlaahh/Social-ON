@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.typekit.net/dhw6xhe.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="logo.ico/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="logo.ico/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="logo.ico/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="logo.ico/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="logo.ico/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="logo.ico/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="logo.ico/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="logo.ico/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="logo.ico/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="logo.ico/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="logo.ico/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="logo.ico/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="logo.ico/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<style type="text/css">
+		@font-face {
+    	font-family: 'Pretendard-Regular';
+    	src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    	font-weight: 400;
+    	font-style: normal;
+    	}
+
+    	@font-face {
+	    font-family: 'Pretendard-Bold';
+	    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+	    font-weight: 800;
+	    font-style: bold;
+		}
+		
+    	html{font-family: "Pretendard"; line-height: 1.7;}
+    	body{margin: 0; cursor: none; ;}
+    	
+    	header{background: #FFFFFF;
+			   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 82%, rgba(254, 255, 130, 1) 92%, rgba(196, 255, 210, 1) 95%, rgba(255, 0, 0, 1) 100%);
+			   z-index: 2;
+			   margin-bottom: 200px;
+		}
+		section{position: relative;
+				
+				word-break: keep-all;
+				font-family: "Pretendard-Regular";
+				line-height: 1.5;
+
+
+		}
+		h1{text-align: center;
+    		font-family: "montserrat"; 
+    		font-size: 8rem; 
+    		color: #C4FFD2;
+    		line-height: 1.2;
+    	}
+    	h2{font-size: 2rem; }
+    	h3{line-height: 1.2; margin-bottom: 0px;font-family: "Pretendard-Regular"}
+    	h4{margin-top: 20px; margin-bottom: 0px; font-family: "Pretendard-Regular"}
+    	p{font-size: 1.7rem;}
+    	nav{background-color: #FF2424;
+    		position: fixed;
+  			bottom: 0;
+  			width: 100%;
+  			z-index: 10;
+  		font-family: "Pretendard-Regular"}
+    	ul {list-style-type: none;
+			background-color: #FF2424;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding: 0;
+			margin: 0;
+			gap: 2px;
+			}
+
+			li {flex: 1 1 calc(25% - 2px);
+				box-sizing: border-box;
+				border-right: 2px solid black;
+				border-top: 2px solid black;
+			}
+			li:last-child {
+  			   border-right: none;
+			}
+
+			li a {display: block;
+			      color: black;
+			      text-align: center;
+			      font-size: 1.2rem;
+			      padding: 11px;
+			      flex: 50%;
+			      text-decoration: none;
+			}
+
+			li a:hover {background-color: #111;
+				color: white;
+			}
+    	.wrap{width: 1000px; margin: auto; position: relative; margin-bottom: 200px;}
+    	.wrap2{width: 1000px; margin: auto; position: relative; padding-top:200px;padding-bottom: 200px;}
+    
+    	/* Responsive layout - makes a one column-layout instead of two-column layout */
+			@media (max-width: 800px) {
+			  li {
+			    flex: 1 1 calc(50% - 2px);
+			  }
+			}
+			@media (max-width: 500px) {
+			  li {
+			    flex: 1 1 100%;
+			  }
+			}
+
+			.custom-cursor {
+			  width: 20px;
+			  height: 20px;
+			  border-radius: 50%;
+			  background-color: rgba(255, 0, 0, 0.3); /* 빨간 반투명 원 */
+			  position: fixed;
+			  pointer-events: none; /* 클릭 방지 */
+			  z-index: 9999;
+			  transform: translate(-50%, -50%);
+			  transition: transform 0.05s ease-out;
+			}
+
+    	.h-back{position: relative;
+    			height: 948px;	
+    	}
+    	.h-back::before{content:"";
+    			   background: url("eye_back.png"), url("eye_back.png");
+    			   position: absolute;
+    			   bottom: 0px; 
+    			   top: 0px; 
+    			   left: 0px; 
+    			   right: 0px; 
+    			   opacity: 0.4;
+    			   background-repeat: no-repeat;
+    			   background-position: left, right;
+    			   background-size: 45%;
+    			   background-attachment: fixed;
+    	}
+    	.h-front{display: block;
+    			 position: relative;
+    			 width: 300px;
+    			 background-color: rgba(254, 255, 130, 0.30);
+    			 border-style: solid;
+    			 border-color: #C4FFD2;
+    			 border-width: 4px;
+    			 margin: auto;
+    			 top: 200px;
+    			}
+    	.h-front2{display: block;
+    			 
+    			 width: 300px;
+    			 background-color: rgba(254, 255, 130, 0.30);
+    			 border-style: solid;
+    			 border-color: #C4FFD2;
+    			 border-width: 4px;
+    			 margin: auto;
+    			 
+    			}
+
+		.h1 {display: block;
+		    position: relative;
+		    background: #FF3E3E;
+			width: 700px; 
+			height: 150px; 
+			border-style: solid;
+			border-color: #C4FFD2;
+			border-width: 4px;
+			margin: auto;
+			top: 220px;
+		}
+		.h1-2 {display: flex;
+			justify-content: center;
+			align-items: center;
+		    position: absolute;
+		    background: #FF3E3E;
+			width: 400px; 
+			height: 80px; 
+			border-style: solid;
+			border-color: #C4FFD2;
+			border-width: 3px;
+			margin: auto;
+			right: 0px;
+			bottom: 80px;
+			text-align: center;
+    		font-family: "montserrat"; 
+    		font-size: 4rem; 
+    		color: #C4FFD2;
+    		
+		}
+		.h1-o, .h1-oo, .h1-ooo, .h1-oooo {position: absolute;
+		  width: 20px;
+		  height: 20px;
+		  background-color: #C4FFD2;
+		  border-radius: 50%;
+			}
+		.h1-o {
+		     top: -12px;
+		     left: -12px;}
+		.h1-oo {
+		     right: -12px;
+		     top: -12px}
+    .h1-ooo {
+		     left: -12px;
+		     bottom: -12px}
+	  .h1-oooo {
+		     right: -12px;
+		     bottom: -12px}
+
+		.walk{background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3lmeG80YTI0OTV4OWllYmN6aGpmcm1kMzVhcDdlNTd1Z3N4YXo0YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CjVamwz5o3Ov1tj3za/giphy.gif); 
+			background-size: cover; 
+			margin: 0;
+			padding: 200px;
+			}
+		.box{background: #C4FFD2;
+			 color: black;
+			 width: 700px;
+			 padding: 50px;
+			 border-style: dotted;
+			 border-width: 7px;
+			 border-color: #FF3E3E;
+			 }
+
+		.white{background: white; 
+			   margin: auto;
+			   margin-bottom: 200px;
+			   position: relative;
+			   height:900px}
+		.box-1, .box-2, .box-3 {height: 60px; align-items:center; }
+		.box-1{background: black;
+		       color: white;
+		       display: flex;
+		       position: absolute;
+		       top: 50px;
+		       left: 80px;
+		       justify-content: center;
+		       text-align: center;
+		       padding-left: 5px;
+		       padding-right: 5px;
+
+		   }
+		.box-2{background: black;
+		       color: white;
+		       display: flex;
+		       position: absolute;
+		       top: 150px;
+		       right: -50px;
+		       justify-content: center;
+		       text-align: center;
+		       padding-left: 5px;
+		       padding-right: 5px;
+		   }
+		.box-3{background: black;
+		       color: white;
+		       display: flex;
+		       position: absolute;
+		       top: 250px;
+		       left: -20px;
+		       justify-content: center;
+		       text-align: center;
+		       padding-left: 5px;
+		       padding-right: 5px;
+		   }
+		.p-font{font-family:"Pretendard-Bold";
+			    font-size:5rem;
+			    color:#D9D9D9;
+			    word-break:break-word;
+			    line-height:1.2;
+			    position: absolute;
+			    top: 400px;}
+	    .caution-box{width: 700px;
+	                 border-style: solid;
+	                 border-width: 4px;
+	                 text-align: center;
+	                 border-color: #FF3E3E;
+	                 padding: 10px;
+	                 margin: auto;}
+	    .eye-y{width: 30%;
+	    	   margin: auto;
+	    	   display: block;
+	    	   margin-bottom: 20px}
+
+	    .sillute{width: 30%;
+	    		position: absolute;
+	    		margin: auto;
+	    		display: block;
+	    		bottom: -100px;
+	    		right: -20px;
+	    		z-index: -1
+	    	}
+	    .sillute-font{text-align: center;
+	                  background-color: #FF3E3E;	                  
+	                  color: #C4FFD2;
+	                  display: block;
+	                  width: 700px;
+	                  margin: auto;
+	                  margin-bottom: 2px;
+	                  font-family: "Pretendard-Bold";
+	                  font-size: 3rem;
+	                  line-height: 1.2;
+	                  transition: transform 0.2s ease;
+	                  border-style: solid;
+	                  border-color:#C4FFD2 ;
+	                  border-width: 1px;
+
+	       }
+	     .sillute-font:hover {
+    		transform: scale(1.1); /* 크기 10% 증가 */
+				}
+
+	    .person{padding-top: 300px;}
+	    .p-center{text-align: center;}
+	    .p-center2{text-align: center; padding-bottom:200px;margin-top:0; padding-top: 50px; font-size: 2rem}
+	    .dot{width: 15px;
+	    	 height: 15px;
+	    	 margin: 30px auto;
+	    	 border-radius: 50%;
+	    	 background-color: #C4FFD2;}
+
+	    .scroll-image {
+		  width: auto;
+		  height: auto;
+		  overflow: visible;
+		}
+
+		.scroll-image img {
+		  width: 100%;
+		  height: auto;
+		  object-fit: contain;
+		  display: block;
+		  clip-path: inset(0 0 100% 0);
+		  opacity: 0;  /* 처음엔 투명 */
+  transition: clip-path 0.3s ease, opacity 0.3s ease;  /* 부드럽게 */
+		}
+		.right{width: 400px;
+					position: absolute;
+					right: 0px;
+					bottom: 450px}
+ 	  .left{width: 500px; 
+ 	  			}
+ 	  .left2{width: 800px; 
+ 	  			}
+ 	  .right2{width: 400px;
+ 	  				position: absolute;
+					right: 0px;
+					top:650px;}
+ 	  .green{background: #C4FFD2}
+ 	  .bold{font-family: "Pretendard-Bold"; font-size: 2.5rem}
+ 	  .black{background: black;color: white;}
+ 	  .h2-p{margin: auto; text-align: center;width: 700px; padding-top: 200px; padding-bottom: 200px; font-family: "Pretendard-Bold"; font-size: 2.5rem}
+
+ 	  .center-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 0px;
+    }
+
+    .image-container {
+      position: relative;
+      width: 70%;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .image-container img.bottom {
+      position: relative;
+      z-index: 1;
+    }
+
+    .image-container img.top {
+      z-index: 2;
+      opacity: 1;
+    }
+
+    .image-container:hover img.top {
+      opacity: 0;
+    }
+
+    .h2-f{margin: auto; text-align: center;width: 800px; padding-top: 0px; padding-bottom: 80px; font-family: "Pretendard-Bold"; font-size: 3.5rem}
+
+
+    .button {
+		  background-color: #FF3E3E;
+		  border: none;
+		  color: white;
+		  padding: 16px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  font-family: "Pretendard-Bold";
+		  display: inline-block;
+		  font-size: 2rem;
+		  margin: 4px 2px;
+		  transition-duration: 0.4s;
+		  cursor: pointer;
+		  border-radius: 25px;
+		}
+		.button1 {
+		  background-color: white; 
+		  color: black; 
+		  border: 2px solid #FF3E3E;
+		}
+		.button1:hover {
+		  background-color: #FF3E3E;
+		  color: black;
+		}
+		.button-wrap{padding-top: 50px}
+		.footer-wrap{margin: auto; width: 1000px;position: relative; top: 50px; margin-bottom: 0px}
+		.footer-back{background: #000000;
+			   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 82%, rgba(254, 255, 130, 1) 92%, rgba(196, 255, 210, 1) 95%, rgba(255, 0, 0, 1) 100%);height: 440px; color: white;margin-bottom: 46px}
+		.footer-bottom {
+		  margin-top: 10px;
+		  font-size: 1rem;
+		  color: white;
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  border-top: 1px solid white;
+		  padding-top: 10px;
+		}
+		.copyright{margin-right: 40px;}
+
+		.blink {
+		  animation: blink 0.8s infinite;
+		}
+
+		@keyframes blink {
+		  0%, 100% {
+		    opacity: 1;
+		  }
+		  50% {
+		    opacity: 0;
+		  }
+		}
+
+	
+	</style>
+	<title>Social:ON</title>
+</head>
+
+<body>
+	<nav>
+		<ul class="nav-flex">
+		  	<li><a href="#about">About</a></li>
+		  	<li><a href="#AR">AR fliter</a></li>
+		  	<li><a href="#React">React feedback</a></li>
+		  	<li><a href="#Buy">Buy</a></li>
+		</ul>
+	</nav>
+	<header class="h-back">
+			<img src="eye.png" class="h-front">		
+			<h1 class="h1">Social:ON
+				<div class="h1-o"></div>
+				<div class="h1-oo"></div>
+				<div class="h1-ooo"></div>
+				<div class="h1-oooo"></div>
+				</h1>
+	</header>
+
+	
+	<section id="about">
+		<div class="wrap box">
+			<h2>사회적 존재로서 우리는 사람을 상대해야 하는 순간을 피할 수 없습니다. 회사에서, 학교에서, 데이트에서, 술자리에서. 그럴 때마다 우리는 끊임없이 생각합니다.</h2>
+		</div>
+	</section>
+
+	<section class="white">
+		<div class="wrap">
+			<div>
+				<h2 class="box-1">"지금 이 말, 괜찮았을까?"</h2>
+			</div>
+			<div>
+				<h2 class="box-2">"상대는 좋다고 하는데... 진짜 좋은 건가?"</h2>
+			</div>
+			<div>
+				<h2 class="box-3">"이 사람이랑 대화하는 건 너무 불편해"</h2>
+			</div>
+		</div>	
+		<p class="p-font">이런 생각들은 당신의 머릿속을 복잡하게 만들고 안그래도 힘든 사회생활을 더욱 고통스럽게 만듭니다. 하지만, 눈에 끼는 렌즈 하나로 이 모든 고통이 조금이라도 줄어든다면 어떨까요?</p>
+	</section>
+
+	<section class="wrap">
+		<img src="eye_yellow.png" class="eye-y">
+		<h2 class="caution-box blink"><font size="8rem">‘Social:ON’은 단순한 시력 보정 렌즈가 아닙니다. 착용자의 사회성을 보완해 주는 도구입니다.</font></h2>
+	</section>
+
+	<section class="wrap">
+		<div class="person">
+		<h2 class="sillute-font">사회성 낙제 인간</h2>
+		<h2 class="sillute-font">발표 공포증 보유자</h2>
+		<h2 class="sillute-font">눈치 없다는 소리 들어본 적 있음</h2>
+		<h2 class="sillute-font">마주하는 것조차 부담스러운 사람 있음</h2>
+		</div>
+		<img src="sillute.png" class="sillute">
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<p class="p-center">이 중 하나라도 해당되는 당신을 위해 고도화된 기술을 렌즈에 담았습니다.</p>
+	</section>
+
+	
+
+  <section class="green" id="AR">
+  	<div class="wrap2">
+  	<div class="left2">
+			<h2 class="bold">AR 인물 얼굴 필터 기능으로 시각적 피로를 줄여 착용자가 편하게 대화할 수 있게 해 줍니다.</h2>
+		</div>
+	 	<div class="scroll-image left">
+    		<img src="cat.png" class="reveal-image" data-start="4500" data-end="5000"/>
+  		</div>
+  		<div><p class="right2">꼴보기 싫은 상사 얼굴을 귀여운 고양이로 필터링해서 보세요. 거리감이 줄어들고 오히려 친근감이 느껴질 거예요.</p></div>
+ 
+	 	<div class="scroll-image left">
+    		<img src="potato.png" class="reveal-image" data-start="5200" data-end="5700"/>
+  		</div>
+  		<div><p class="right">중요한 면접날, 면접관 얼굴에 감자 필터가 씌어진다면? 준비했던 말을 떨지 않고 막힘없이!</p></div>
+  		</div>
+  </section>
+
+
+	<section class="black" id="React">
+		<div class="wrap">
+  		<div>
+				<h2 class="h2-p">상대가 나한테 집중하고 있는지 아닌지 모르겠다고요? 렌즈가 실시간으로 상대 표정을 분석해 HUD로 보여줘요.</h2>
+			</div>
+		 	<div class="center-wrapper">
+    		<div class="image-container">
+     		 	<img src="good2.png" alt="기본 이미지" class="bottom" />
+      		<img src="normal.png" alt="호버 이미지" class="top" />
+    		</div>
+  		</div>
+
+			<p class="p-center2">흥미를 가진다면 대화를 이어나가고</p>
+
+			 	<div class="center-wrapper">
+    		<div class="image-container">
+     		 	<img src="bad2.png" alt="기본 이미지" class="bottom" />
+      		<img src="normal.png" alt="호버 이미지" class="top" />
+    		</div>
+  		</div>
+
+  		<p class="p-center2">지루해한다면 빠르게 대화 주제를 바꾸세요</p>
+		</div>
+  	</section>
+
+  	<section id="Buy">
+  		<div class="wrap">
+  			<h2 class="h2-f">눈치게임과 같은 사회생활은 이제 그만. 이젠 눈치 보지 말고, 렌즈 하나로 상황을 주도해 보세요!</h2>
+  			<img src="eye.png" class="h-front2">
+  			
+  			<div class="center-wrapper button-wrap">
+  			<button class="button button1">바로 구매하기</button>
+  			</div>
+  		</div>
+  	</section>
+
+  	<footer class="footer-back">
+  		<div class="footer-wrap">
+  			<h3>제품 관련 문의</h3>
+  			<h4>전화번호<br>02-222-333</h4>
+  			<h4>이메일<br>ee24dl@gmail.com</h4>  			
+  			<h4>주소<br>232 Gongneung-ro, Nowon-gu, Seoul</h4>
+  			<h2 class="h1-2" onclick="scrollToTop()">Social:ON</h2>
+			</div>
+			<div class="footer-wrap footer-bottom">
+				<div class="footer-bootom-left">
+				<span class="copyright">Copyright © 2025 Social:ON. 모든 권리 보유.</span>
+	      <span>개인정보 처리방침</span>
+	      <span>|</span>
+	      <span>웹사이트 이용 약관</span>
+	      <span>|</span>
+	      <span>판매 및 환불</span>
+	      <span>|</span>
+	      <span>법적 고지</span>
+	      <span>|</span>
+	      <span>사이트 맵</span>
+	      </div>
+  			<div class="footer-bottom-right"> 대한민국
+    		</div>
+  	</footer>
+  	<div class="custom-cursor"></div>
+
+  <script>
+  const images = document.querySelectorAll('.reveal-image');  // .reveal-image 클래스를 가진 모든 이미지 선택
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+
+  images.forEach(img => {  // 모든 이미지에 대해 반복 처리
+    const start = parseInt(img.getAttribute('data-start'));  // 각 이미지의 시작 스크롤 위치
+    const end = parseInt(img.getAttribute('data-end'));    // 각 이미지의 끝 스크롤 위치
+
+    if (scrollY < start) {
+      img.style.clipPath = `inset(0 0 100% 0)`;  // 전부 가려짐
+      img.style.opacity = 0;
+    } else if (scrollY > end) {
+      img.style.clipPath = `inset(0 0 0% 0)`;    // 전부 보임
+      img.style.opacity = 1;
+    } else {
+      const progress = (scrollY - start) / (end - start); // 0 ~ 1
+      const revealPercent = 100 - progress * 100;
+      img.style.clipPath = `inset(0 0 ${revealPercent}% 0)`;
+      img.style.opacity = progress;
+    }
+  });
+});
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+  </script>
+
+  <script>
+  const cursor = document.querySelector('.custom-cursor');
+
+  window.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+</script>
+
+</body>
+</html>
